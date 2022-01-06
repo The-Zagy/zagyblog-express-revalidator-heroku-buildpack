@@ -64,10 +64,8 @@ install_binaries() {
 }
 
 install_binaries
+write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 
 echo "-> Run build"
-pwd
-pnpx prisma generate
-echo "DONE"
-pnpx next build
+pnpm build
 
