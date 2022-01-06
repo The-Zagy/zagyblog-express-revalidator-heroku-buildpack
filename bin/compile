@@ -49,9 +49,5 @@ write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 echo "-> Run build"
 pnpm build
 
-
 echo "-> Reshimming with correct paths for slug"
-export ASDF_DIR=$HOME/.asdf
-export ASDF_DATA_DIR=$HOME/.asdf
-echo "DIR: $ASDF_DIR"
-asdf reshim
+asdf current pnpm
