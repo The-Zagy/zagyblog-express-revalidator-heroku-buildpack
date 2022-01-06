@@ -55,10 +55,12 @@ echo "PNPMver = $pnpmver"
 cd $BUILD_DIR
 mkdir -p $BUILD_DIR/.bin/
 ln -s ".asdf/installs/pnpm/${pnpmver}/bin/pnpm.cjs" .bin/pnpm 
+chmod +x $BUILD_DIR/.bin/pnpm
 
 echo "-> Linking node with correct paths for slug"
 nodever=`asdf current nodejs | awk '{print $2}'`
 echo "NODEver = $nodever"
 cd $BUILD_DIR
 ln -s ".asdf/installs/nodejs/${nodever}/bin/node" .bin/node
+chmod +x $BUILD_DIR/.bin/node
 
