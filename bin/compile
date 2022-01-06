@@ -55,6 +55,8 @@ install_binaries() {
   asdf install nodejs
   echo "Installing pnpm from tool versions"
   asdf install pnpm
+
+  ls -la
 }
 
 install_binaries
