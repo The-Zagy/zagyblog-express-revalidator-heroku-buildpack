@@ -50,4 +50,9 @@ echo "-> Run build"
 pnpm build
 
 echo "-> Reshimming with correct paths for slug"
-asdf current pnpm
+pnpmver=`asdf current pnpm | awk '{print $2}'`
+echo "PNPMver = $pnpmver"
+cd $BUILD_DIR
+mkdir -p $BUILD_DIR/.bin/
+ln -s ".asdf/installs/pnpm/${pnpmver}/bin/pnpm.cjx" .bin/pnpm 
+
