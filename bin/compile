@@ -60,5 +60,5 @@ echo "-> Linking node with correct paths for slug"
 nodever=`asdf current nodejs | awk '{print $2}'`
 echo "NODEver = $nodever"
 cd $BUILD_DIR
-ln -s ".asdf/installs/node/${nodever}/bin/node" .bin/node
+ln -s ".asdf/installs/nodejs/${nodever}/bin/node" .bin/node
 
