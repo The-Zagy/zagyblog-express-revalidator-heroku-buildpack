@@ -29,7 +29,7 @@ install_binaries() {
 
   rm -rf $BUILD_DIR/node_modules/
   export ASDF_DIR=$BUILD_DIR/.asdf
-  export ASDF_DATA_DIR=$BUILD_DIR/.asdf
+  #export ASDF_DATA_DIR=$BUILD_DIR/.asdf
   export PATH=$BUILD_DIR/.asdf/bin/:$ASDF_DATA_DIR/shims/:$PATH
 
   echo "-> Adding asdf-nodejs"
@@ -42,7 +42,7 @@ install_binaries() {
   echo "-> Installing pnpm from tool versions"
   asdf install pnpm
 
-  ASDF_DATA_DIR=/app/.asdf/ ASDF_DIR=/app/.asdf/ asdf reshim
+  asdf reshim
 }
 
 install_binaries
