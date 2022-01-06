@@ -59,8 +59,8 @@ install_binaries() {
   pwd
   ls -la
   ls -la .asdf
-  ls -la .asdf/shims
   ls -la .asdf/installs
+  asdf shim-versions
 }
 
 install_binaries
