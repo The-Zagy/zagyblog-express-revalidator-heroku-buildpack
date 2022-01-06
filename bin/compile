@@ -47,10 +47,14 @@ install_binaries() {
   export PATH=$BUILD_DIR/.asdf/bin/:$PATH
 
   echo "Adding asdf-nodejs"
-  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  asdf plugin add nodejs
+  echo "Adding asdf-pnpm"
+  asdf plugin add pnpm
 
   echo "Installing nodejs from tool versions"
   asdf install nodejs
+  echo "Installing pnpm from tool versions"
+  asdf install pnpm
 }
 
 install_binaries
