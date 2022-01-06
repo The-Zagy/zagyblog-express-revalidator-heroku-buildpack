@@ -60,7 +60,7 @@ install_binaries() {
   ls -la $BUILD_DIR/.asdf/
   cd ~/
   pwd
-  ls -la .asdf
+  ls -la .asdf/shims
   pnpm -v
 }
 
