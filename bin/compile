@@ -66,4 +66,8 @@ install_binaries() {
 install_binaries
 
 echo "-> Run build"
-pnpm build
+pwd
+pnpx prisma generate
+echo "DONE"
+pnpx next build
+
