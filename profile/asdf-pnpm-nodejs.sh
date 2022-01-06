@@ -28,9 +28,6 @@ detect_memory() {
   esac
 }
 
-export PATH=$HOME/.heroku/bin:$PATH
-eval "$(fnm env)"
-
 calculate_concurrency
 
 export MEMORY_AVAILABLE=$MEMORY_AVAILABLE

@@ -16,10 +16,6 @@ BUILDPACK_DIR=$(
   cd ..
   pwd
 )
-BIN_DIR="$BUILD_DIR/.heroku/bin"
-DEFAULT_NODE_VERSION=16
-
-mkdir -p "$BUILD_DIR/.heroku/bin/"
 
 cd "$BUILD_DIR"
 
