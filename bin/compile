@@ -58,7 +58,9 @@ install_binaries() {
   asdf install pnpm
 
   ls -la $BUILD_DIR/.asdf/
-  ls -la ~/
+  cd ~/
+  pwd
+  ls -la .asdf
   pnpm -v
 }
 
