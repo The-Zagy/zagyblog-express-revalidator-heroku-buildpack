@@ -24,9 +24,9 @@ mkdir -p "$BUILD_DIR/.heroku/bin/"
 cd "$BUILD_DIR"
 
 ### Load Dependencies
-source "$BUILDPACK_DIR/lib/environment.sh"
-source "$BUILDPACK_DIR/lib/json.sh"
-source "$BUILDPACK_DIR/lib/heroku.sh"
+#source "$BUILDPACK_DIR/lib/environment.sh"
+#source "$BUILDPACK_DIR/lib/json.sh"
+#source "$BUILDPACK_DIR/lib/heroku.sh"
 
 ### Create and export environment variables
 create_env() {
@@ -41,21 +41,21 @@ install_binaries() {
   #local node_engine=$(read_json "$BUILD_DIR/package.json" ".engines.node")
   #local npm_engine=$(read_json "$BUILD_DIR/package.json" ".engines.npm")
 
-  echo "Cloning ASDF..."
+  echo "-> Cloning ASDF..."
   git clone https://github.com/asdf-vm/asdf.git $BUILD_DIR/.asdf --branch v0.9.0
 
   export ASDF_DIR=$BUILD_DIR/.asdf
   export ASDF_DATA_DIR=$BUILD_DIR/.asdf
   export PATH=$BUILD_DIR/.asdf/bin/:$ASDF_DATA_DIR/shims/:$PATH
 
-  echo "Adding asdf-nodejs"
+  echo "-> Adding asdf-nodejs"
   asdf plugin add nodejs
-  echo "Adding asdf-pnpm"
+  echo "-> Adding asdf-pnpm"
   asdf plugin add pnpm
 
-  echo "Installing nodejs from tool versions"
+  echo "-> Installing nodejs from tool versions"
   asdf install nodejs
-  echo "Installing pnpm from tool versions"
+  echo "-> Installing pnpm from tool versions"
   asdf install pnpm
 
   ls -la $BUILD_DIR/.asdf/shims
@@ -64,8 +64,5 @@ install_binaries() {
 
 install_binaries
 
-echo "-----> Run prebuild"
-run_prebuild "$BUILD_DIR"
-
-echo "-----> Run build"
-run_build "$BUILD_DIR"
+echo "-> Run build"
+pnpm build
