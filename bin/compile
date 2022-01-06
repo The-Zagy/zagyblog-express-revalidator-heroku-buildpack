@@ -59,6 +59,7 @@ install_binaries() {
   asdf list
   asdf reshim
   asdf shim-versions
+  which pnpm
 }
 
 install_binaries
