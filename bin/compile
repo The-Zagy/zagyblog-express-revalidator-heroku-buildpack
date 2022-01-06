@@ -46,6 +46,7 @@ install_binaries() {
 
   export PATH=$BUILD_DIR/.asdf/bin/:$PATH
   export ASDF_DIR=$BUILD_DIR/.asdf
+  export ASDF_DATA_DIR=$BUILD_DIR/.asdf
 
   echo "Adding asdf-nodejs"
   asdf plugin add nodejs
