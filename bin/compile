@@ -29,12 +29,12 @@ cd "$BUILD_DIR"
 #source "$BUILDPACK_DIR/lib/heroku.sh"
 
 ### Create and export environment variables
-create_env() {
-  write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
-  export_env_dir "$ENV_DIR"
-}
+#create_env() {
+#  write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
+#  export_env_dir "$ENV_DIR"
+#}
 
-create_env
+#create_env
 
 ### Install binaries needed for build
 install_binaries() {
