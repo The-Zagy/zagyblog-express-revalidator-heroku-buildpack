@@ -41,8 +41,12 @@ install_binaries() {
   #local node_engine=$(read_json "$BUILD_DIR/package.json" ".engines.node")
   #local npm_engine=$(read_json "$BUILD_DIR/package.json" ".engines.npm")
 
+  echo "Cloning ASDF..."
   git clone https://github.com/asdf-vm/asdf.git $BIN_DIR/.asdf --branch v0.9.0
+  . $BIN_DIR/.asdf/asdf.sh
 
+  echo "Adding asdf-nodejs"
+  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 }
 
 install_binaries
