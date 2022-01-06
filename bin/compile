@@ -41,8 +41,6 @@ install_binaries() {
   asdf install nodejs
   echo "-> Installing pnpm from tool versions"
   asdf install pnpm
-
-  asdf reshim
 }
 
 install_binaries
@@ -51,3 +49,9 @@ write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 echo "-> Run build"
 pnpm build
 
+
+echo "-> Reshimming with correct paths for slug"
+export ASDF_DIR=$HOME/.asdf
+export ASDF_DATA_DIR=$HOME/.asdf
+echo "DIR: $ASDF_DIR"
+asdf reshim
