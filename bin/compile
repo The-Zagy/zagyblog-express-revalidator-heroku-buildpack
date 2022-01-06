@@ -58,10 +58,7 @@ install_binaries() {
   echo "Installing pnpm from tool versions"
   asdf install pnpm
 
-  ls -la $BUILD_DIR/.asdf/
-  cd ~/
-  pwd
-  ls -la .asdf/shims
+  ls -la $BUILD_DIR/.asdf/shims
   pnpm -v
 }
 
