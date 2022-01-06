@@ -44,11 +44,13 @@ install_binaries() {
   echo "Cloning ASDF..."
   git clone https://github.com/asdf-vm/asdf.git $BUILD_DIR/.asdf --branch v0.9.0
 
+  export PATH=$BUILD_DIR/.asdf/bin/:$PATH
+
   echo "Adding asdf-nodejs"
-  $BUILD_DIR/.asdf/bin/asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
   echo "Installing nodejs from tool versions"
-  $BUILD_DIR/.asdf/bin/asdf install nodejs
+  asdf install nodejs
 }
 
 install_binaries
