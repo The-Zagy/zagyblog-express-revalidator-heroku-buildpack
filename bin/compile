@@ -30,7 +30,7 @@ install_binaries() {
   rm -rf $BUILD_DIR/node_modules/
   export ASDF_DIR=$BUILD_DIR/.asdf
   #export ASDF_DATA_DIR=$BUILD_DIR/.asdf
-  export PATH=$BUILD_DIR/.asdf/bin/:$ASDF_DATA_DIR/shims/:$PATH
+  export PATH=$BUILD_DIR/.asdf/bin/:$PATH
 
   echo "-> Adding asdf-nodejs"
   asdf plugin add nodejs
