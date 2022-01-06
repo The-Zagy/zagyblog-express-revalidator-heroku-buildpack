@@ -56,10 +56,7 @@ install_binaries() {
   echo "Installing pnpm from tool versions"
   asdf install pnpm
 
-  pwd
-  ls -la
-  ls -la .asdf
-  ls -la .asdf/installs
+  asdf list
   asdf shim-versions
 }
 
