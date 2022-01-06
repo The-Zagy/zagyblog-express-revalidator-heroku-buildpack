@@ -45,6 +45,7 @@ install_binaries() {
   git clone https://github.com/asdf-vm/asdf.git $BUILD_DIR/.asdf --branch v0.9.0
 
   export PATH=$BUILD_DIR/.asdf/bin/:$PATH
+  export ASDF_DIR=$BUILD_DIR/.asdf
 
   echo "Adding asdf-nodejs"
   asdf plugin add nodejs
