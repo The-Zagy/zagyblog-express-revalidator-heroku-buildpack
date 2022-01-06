@@ -42,7 +42,7 @@ install_binaries() {
   echo "-> Installing pnpm from tool versions"
   asdf install pnpm
 
-  ASDF_DATA_DIR=/app/.asdf/ asdf reshim
+  ASDF_DATA_DIR=/app/.asdf/ ASDF_DIR=/app/.asdf/ asdf reshim
 }
 
 install_binaries
