@@ -47,8 +47,8 @@ install_binaries() {
   echo "Adding asdf-nodejs"
   $BUILD_DIR/.asdf/bin/asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
-  echo "Installing tool versions"
-  $BUILD_DIR/.asdf/bin/asdf install
+  echo "Installing nodejs from tool versions"
+  $BUILD_DIR/.asdf/bin/asdf install nodejs
 }
 
 install_binaries
