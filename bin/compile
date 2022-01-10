@@ -46,6 +46,9 @@ install_binaries() {
 install_binaries
 write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 
+echo "-> Run install"
+pnpm install
+
 echo "-> Run build"
 pnpm build
 
