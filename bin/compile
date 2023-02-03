@@ -40,7 +40,7 @@ install_binaries() {
   echo "-> Installing nodejs from tool versions"
   asdf install nodejs latest
   echo "-> Installing pnpm from tool versions"
-  asdf install pnpm
+  asdf install pnpm latest
 }
 
 install_binaries
