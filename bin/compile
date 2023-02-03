@@ -37,9 +37,9 @@ install_binaries() {
   echo "-> Adding asdf-pnpm"
   asdf plugin add pnpm
   echo "-> Installing nodejs from tool versions"
-  asdf global nodejs latest
+  asdf install nodejs
   echo "-> Installing pnpm from tool versions"
-  asdf global pnpm latest
+  asdf install pnpm
 }
 
 install_binaries
