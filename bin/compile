@@ -40,8 +40,6 @@ install_binaries() {
   asdf install nodejs latest
   echo "-> Installing pnpm from tool versions"
   asdf install pnpm latest
-  asdf global nodejs latest
-  asdf global pnpm latest
 }
 
 install_binaries
