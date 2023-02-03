@@ -33,12 +33,12 @@ install_binaries() {
   export PATH=$BUILD_DIR/.asdf/bin/:$ASDF_DIR/shims/:$PATH
 
   echo "-> Adding asdf-nodejs"
-  asdf plugin add nodejs
+  asdf plugin add nodejs lts
   echo "-> Adding asdf-pnpm"
   asdf plugin add pnpm
 
   echo "-> Installing nodejs from tool versions"
-  asdf install nodejs
+  asdf install nodejs lts
   echo "-> Installing pnpm from tool versions"
   asdf install pnpm
 }
@@ -46,9 +46,5 @@ install_binaries() {
 install_binaries
 write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 
-echo "-> Run install"
-pnpm install
-
-echo "-> Run build"
-pnpm build
-
+echo "-> Run deploy"
+pnpm run deploy:express
