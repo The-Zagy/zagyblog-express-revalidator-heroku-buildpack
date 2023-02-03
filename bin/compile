@@ -48,3 +48,4 @@ write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 
 echo "-> Run deploy"
 
+pnpm run deploy:express
