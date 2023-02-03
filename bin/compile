@@ -40,7 +40,7 @@ install_binaries() {
   echo "-> Installing nodejs from tool versions"
   asdf install nodejs latest
   echo "-> Installing pnpm from tool versions"
-  asdf install pnpm latest
+  npm install -g pnpm
 }
 
 install_binaries
@@ -48,5 +48,5 @@ write_profile "$BUILDPACK_DIR" "$BUILD_DIR"
 
 echo "-> Run deploy"
 
-pnpm latest run install:express
-pnpm latest run build:express
+pnpm run install:express
+pnpm run build:express
