@@ -33,7 +33,7 @@ install_binaries() {
   export PATH=$BUILD_DIR/.asdf/bin/:$ASDF_DIR/shims/:$PATH
 
   echo "-> Adding asdf-nodejs"
-  asdf plugin add nodej
+  asdf plugin add nodejs
   echo "-> Adding asdf-pnpm"
   asdf plugin add pnpm
 
