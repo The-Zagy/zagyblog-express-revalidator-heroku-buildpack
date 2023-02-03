@@ -4,5 +4,5 @@
 cat << EOF
 addons: []
 default_process_types:
-  web: npm run start:express:prod
+  web: pnpm run start:express:prod
 EOF
